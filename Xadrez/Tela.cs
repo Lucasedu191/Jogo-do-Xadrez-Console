@@ -14,7 +14,7 @@ namespace Xadrez
                 Console.Write(8 - i + " ");
                 for (int j=0; j<tab.colunas; j++)
                 {   
-                        imprimirPeca(tab.peca(i, j)); 
+                        imprimirPeca(tab.peca(i,j)); 
                 }
                 Console.WriteLine();
             }
@@ -25,13 +25,12 @@ namespace Xadrez
         {
             ConsoleColor fundoOriginal = Console.BackgroundColor;
             ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
-
             for (int i = 0; i < tab.linhas; i++)
             {
                 Console.Write(8 - i + " ");
                 for (int j = 0; j < tab.colunas; j++)
                 {
-                    if (posicoesPossiveis[i,j])
+                    if (posicoesPossiveis[i,j] == true)
                     {
                         Console.BackgroundColor = fundoAlterado;
                     }
@@ -39,7 +38,7 @@ namespace Xadrez
                     {
                         Console.BackgroundColor = fundoOriginal;
                     }
-                    imprimirPeca(tab.peca(i, j));
+                    imprimirPeca(tab.peca(i,j));
 
                 }
                 Console.WriteLine();
