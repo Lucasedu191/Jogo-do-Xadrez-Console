@@ -53,9 +53,13 @@ namespace xadrez
 
         public void realizaJogada(Posicao origem, Posicao destino)
         {
+<<<<<<< HEAD
             
             Peca pecaCapturada = executaMovimento(origem, destino);
 
+=======
+            Peca pecaCapturada = executaMovimento(origem, destino);
+>>>>>>> ade3f29a09c8dcbb654643947a051dd057816309
             if (estaEmXeque(jogadorAtual))
             {
                 desfazMovimento(origem, destino, pecaCapturada);
@@ -69,6 +73,7 @@ namespace xadrez
             {
                 xeque = false;
             }
+<<<<<<< HEAD
             if (testeXequemate(adversaria(jogadorAtual)))
             {
                 terminada = true;
@@ -80,6 +85,10 @@ namespace xadrez
             }
             
             
+=======
+            turno++;
+            mudaJogador();
+>>>>>>> ade3f29a09c8dcbb654643947a051dd057816309
         }
 
         public void validarPosicaoDeOrigem(Posicao pos)
@@ -129,7 +138,10 @@ namespace xadrez
             }
             return aux;
         }
+<<<<<<< HEAD
        
+=======
+>>>>>>> ade3f29a09c8dcbb654643947a051dd057816309
         private Cor adversaria(Cor cor)
         {
             if  (cor== Cor.Branca)
@@ -169,6 +181,7 @@ namespace xadrez
             }
             return false;
         }
+<<<<<<< HEAD
 
         public bool testeXequemate(Cor cor)
         {
@@ -204,6 +217,8 @@ namespace xadrez
                 }
             return true;
         }
+=======
+>>>>>>> ade3f29a09c8dcbb654643947a051dd057816309
         public HashSet<Peca> pecasEmJogo(Cor cor)
         {
             HashSet<Peca> aux = new HashSet<Peca>();

@@ -14,6 +14,7 @@ namespace Xadrez
             imprimirPecasCapturadas(partida);
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
+<<<<<<< HEAD
 
             if (!partida.terminada)
             {
@@ -28,6 +29,12 @@ namespace Xadrez
                 Console.WriteLine("XEQUEMATE!");
                 Console.WriteLine("Vencedor: " + partida.jogadorAtual);
 
+=======
+            Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+            if (partida.xeque)
+            {
+                Console.WriteLine("Você está em xeque");
+>>>>>>> ade3f29a09c8dcbb654643947a051dd057816309
             }
         }
         public static void imprimirPecasCapturadas(PartidaXadrez partida)
